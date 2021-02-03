@@ -182,8 +182,6 @@ chroot $IMAGEDIR apt-get -y install apt apt-transport-https libapt-inst2.0 libap
 sed -r -i -e '1d' $IMAGEDIR/etc/apt/apt.conf $IMAGEDIR/etc/apt/sources.list
 
 chroot $IMAGEDIR apt-get -y install `egrep -v '^#' $BAKERYDIR/debs-to-download`
-dpkg --root $IMAGEDIR --force-depends --purge rpd-wallpaper
-chroot $IMAGEDIR apt-get -y install revpi-wallpaper
 chroot $IMAGEDIR apt-get update
 chroot $IMAGEDIR apt-get -y install teamviewer-revpi
 chroot $IMAGEDIR apt-mark hold raspi-copies-and-fills
