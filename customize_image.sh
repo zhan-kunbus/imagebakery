@@ -6,8 +6,8 @@ if [ "$#" != 1 ] ; then
 	exit 1
 fi
 
-if [ ! -x /usr/sbin/parted ] ; then
-   echo 1>&1 "Error: /usr/sbin/parted is not executable."
+if [ ! -x /sbin/parted ] ; then
+   echo 1>&1 "Error: /sbin/parted is not executable."
    exit 1
 fi
 
